@@ -1,0 +1,20 @@
+package homeshop;
+
+public class RelayDelivry implements  Delivry{
+    private  int relayNumber;
+
+    public RelayDelivry(int relayNumber) {
+        this.relayNumber = relayNumber;
+    }
+
+    @Override
+    public double getPrice() {
+        if(relayNumber>=1 && relayNumber<=22)
+            return 0;
+        else if (relayNumber>=23 && relayNumber <= 47)
+            return 2.99;
+        else
+            return  4.99;
+    }
+
+}
